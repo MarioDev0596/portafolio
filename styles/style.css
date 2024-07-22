@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --color-primario: #000000;
+    --color-secundario: #FEF3E2;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Asegúrate de que el video esté detrás del contenido */
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    font-family: var(--fuente-montserrat);
+    box-sizing: border-box;
+    
+    
+}
+
+.header {
+    
+    padding: 2% 0 0 6%; /* Reducir el padding */
+    text-align: center; /* Centrar el contenido del header */
+}
+
+.header__menu {
+    display: flex;
+    gap: 40px; /* Ajustar gap para reducir espacio */
+}
+
+.header__menu__link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.presentacion {
+    padding: 4% 1%; /* Reducir padding para centrar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentacion__contenido {
+    
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+
+.presentacion__contenido__titulo {
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+    text-align: center;
+}
+
+.presentacion__contenido__subtitulo {
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+}
+
+
+.titulo-destaque {
+    color: var(--color-terciario);
+}
+
+.presentacion__contenido__texto {
+    font-size: 1.25rem;
+    list-style-type: none;
+    
+}
+
+.presentacion__contenido__texto .con-puntos {
+    list-style-type: disc; /* Aplicar puntos solo a los elementos con la clase 'con-puntos' */
+    margin-left: 20px; /* Ajustar el margen para los elementos con puntos */
+}
+
+.presentacion__contenido__texto li {
+    margin-bottom: 15px; /* Añadir espacio debajo de cada ítem de lista */
+}
+
+.presentacion__enlaces {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    
+}
+
+.presentacion__enlaces__subtitulo {
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+    font-size: 1.375rem;
+}
+
+.presentacion__enlaces__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 2px solid var(--color-terciario);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 16px 0;
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
+.presentacion__enlaces__link:hover {
+    background-color: var(--color-hover);
+}
+
+.presentacion__imagen {
+    width: 20%;
+    
+    transform: translateY(-50%); /* Centra verticalmente en el medio de la sección */
+    
+    
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    
+    color: var(--color-primario);
+    background-color: var(--color-terciario);
+    padding: 10px;
+    text-align: center;
+    font-size: 1.375rem;
+    font-weight: 400;
+    
+}
+
+p {
+    list-style-type: none; /* Quitar cualquier estilo de lista */
+}
+
+@media (max-width: 1200px) {
+
+    .header {
+        padding: 10% ;
+    }
+
+    .header__menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+        
+    }
+
+    .presentacion__contenido {
+        width: auto; /* Asegura que el contenido ocupe todo el ancho disponible */
+        text-align: center; /* Centra el texto en la versión móvil */
+    }
+
+    .presentacion__contenido__texto {
+        text-align: justify;
+    }
+
+
+    .presentacion__imagen {
+        width: 50%; /* Ajusta el tamaño del logo para móviles según sea necesario */   
+    }
+}
+
